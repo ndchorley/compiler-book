@@ -6,4 +6,5 @@ cc_test(
         "@googletest//:gtest",
         "@googletest//:gtest_main",
     ],
+    cxxopts = ["-std=c++23"]
 )
