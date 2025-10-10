@@ -1,0 +1,4 @@
+a. Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday
+
+b. ([0-9]|[0-9][0-9]|[0-9][0-9][0-9])(,[0-9][0-9][0-9])*
+
