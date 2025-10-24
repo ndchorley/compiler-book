@@ -22,6 +22,7 @@
 }
 
 %%
+(" "|\t|\n) // Skip whitespace
 \(      cout << Token::LEFT_PAREN << " ";
 \)      cout << Token::RIGHT_PAREN << " ";
 .       cout << Token::UNIDENTIFIED << " ";
