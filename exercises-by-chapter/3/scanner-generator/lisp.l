@@ -7,6 +7,7 @@
     enum class Token {
         LEFT_PAREN,
         RIGHT_PAREN,
+        IDENTIFIER,
         UNIDENTIFIED
     };
 
@@ -14,6 +15,7 @@
         switch (token) {
             case Token::LEFT_PAREN : out << "LEFT_PAREN"; break;
             case Token::RIGHT_PAREN : out << "RIGHT_PAREN"; break;
+            case Token::IDENTIFIER : out << "IDENTIFIER"; break;
             case Token::UNIDENTIFIED : out << "UNIDENTIFIED"; break;
         }
 
@@ -25,6 +27,7 @@
 (" "|\t|\n) // Skip whitespace
 \(      cout << Token::LEFT_PAREN << " ";
 \)      cout << Token::RIGHT_PAREN << " ";
+[a-zA-Z]+ cout << Token::IDENTIFIER << "(" << str() << ")" << " ";
 .       cout << Token::UNIDENTIFIED << " ";
 
 %%
