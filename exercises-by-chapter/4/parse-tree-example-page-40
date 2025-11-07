@@ -1,0 +1,15 @@
+Sentence: if E then if E then other else other
+
+Else belongs to the inner if:
+
+P -> S
+S -> if E then S
+S -> if E then S else S
+S -> other
+
+Else belongs to the outer if:
+
+P -> S
+S -> if E then S else S
+S -> if E then S
+S -> other
