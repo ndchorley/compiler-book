@@ -9,6 +9,7 @@
         RIGHT_PAREN,
         IDENTIFIER,
         NUMBER,
+        STRING,
         UNIDENTIFIED
     };
 
@@ -18,6 +19,7 @@
             case Token::RIGHT_PAREN : out << "RIGHT_PAREN"; break;
             case Token::IDENTIFIER : out << "IDENTIFIER"; break;
             case Token::NUMBER : out << "NUMBER"; break;
+            case Token::STRING : out << "STRING"; break;
             case Token::UNIDENTIFIED : out << "UNIDENTIFIED"; break;
         }
 
@@ -29,6 +31,7 @@
 (" "|\t|\n) // Skip whitespace
 \(      cout << Token::LEFT_PAREN << " ";
 \)      cout << Token::RIGHT_PAREN << " ";
+\".*\"  cout << Token::STRING << "(" << str() << ")" << " ";
 [a-zA-Z]+ cout << Token::IDENTIFIER << "(" << str() << ")" << " ";
 [1-9][0-9]* cout << Token::NUMBER << "(" << str() << ")" << " ";
 .       cout << Token::UNIDENTIFIED << " ";
