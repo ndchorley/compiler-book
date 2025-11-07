@@ -3,4 +3,5 @@
 set -e
 
 reflex lisp.l
-clang++ -o lisp-scanner lex.yy.cpp libreflex.a
+clang++ -I $REFLEX_INCLUDE_PATH -o lisp-scanner \
+	lex.yy.cpp $REFLEX_LIB_PATH/libreflex.a
