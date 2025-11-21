@@ -1,0 +1,32 @@
+Grammar G3 (page 39) is
+
+P -> E
+E -> E + T
+E -> T
+T -> ident
+T -> int
+
+So, we have
+
+E -> E (+ T) | T
+E -> E alpha_1 | beta_1
+
+The substitution is
+
+E -> beta_1 E' (because we only have one recursive rule?)
+E' -> alpha_1 E' | epsilon
+
+E -> beta_1 E':
+E -> T E'
+
+E' -> alpha_1 E':
+E' -> + T E'
+
+So our grammar becomes (G6):
+
+P -> E
+E -> T E'
+E' -> + T E'
+E -> epsilon
+T -> ident
+T -> int
