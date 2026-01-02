@@ -43,3 +43,7 @@ FOLLOW(E) = {
   ) (from rule  8, following F -> alpha E beta),
   $ (from rule 1)
 }
+
+FOLLOW(E') = {
+  ), $ (rule 2 is E -> T E', so FIRST(E) goes in FOLLOW(E'))
+}
