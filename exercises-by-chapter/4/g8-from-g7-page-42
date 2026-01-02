@@ -1,0 +1,25 @@
+Grammar G7 is
+
+P -> E
+E -> id
+E -> id [ E ]
+E -> id ( E )
+
+We can write
+
+E -> id | id [ E ] | id ( E )
+
+The substitution is
+
+E -> alpha E'
+E -> id E'
+E' -> beta_1 | beta_2 | beta_3
+E' -> epsilon | [ E ] | ( E )
+
+So the grammar becomes
+
+P -> E
+E -> id E'
+E' -> epsilon
+E' -> [ E ]
+E' -> ( E )
