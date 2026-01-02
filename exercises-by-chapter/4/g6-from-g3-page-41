@@ -27,6 +27,6 @@ So our grammar becomes (G6):
 P -> E
 E -> T E'
 E' -> + T E'
-E -> epsilon
+E' -> epsilon
 T -> ident
 T -> int
