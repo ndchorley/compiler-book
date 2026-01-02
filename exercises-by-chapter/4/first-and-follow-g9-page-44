@@ -1,0 +1,16 @@
+The grammar is
+
+1. P -> E
+2. E -> T E'
+3. E' -> + T E'
+4. E' -> epsilon
+5. T -> F T'
+6. T' -> * F T'
+7. T' -> epsilon
+8. F -> ( E )
+9. F -> int
+
+FIRST(F) = {
+  int (from rule 9),
+  ( (from rule 8)
+}
