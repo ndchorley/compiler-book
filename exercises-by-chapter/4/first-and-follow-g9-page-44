@@ -53,3 +53,7 @@ FOLLOW(T) = {
   ), $ (rule 3. FIRST(E') contains epsilon, so FOLLOW(E')
        goes in FOLLOW(T))
 }
+
+FOLLOW(T') = {
+  +, ), $ (rule 5. FOLLOW(T) goes in FOLLOW(T'))
+}
