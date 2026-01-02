@@ -47,3 +47,9 @@ FOLLOW(E) = {
 FOLLOW(E') = {
   ), $ (rule 2 is E -> T E', so FIRST(E) goes in FOLLOW(E'))
 }
+
+FOLLOW(T) = {
+  + (rule 3 is E' -> + T E', so FIRST(E') goes in FOLLOW(T)),
+  ), $ (rule 3. FIRST(E') contains epsilon, so FOLLOW(E')
+       goes in FOLLOW(T))
+}
