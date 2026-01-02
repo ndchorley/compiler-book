@@ -23,3 +23,9 @@ FIRST(T') = {
 FIRST(T) = {
   int, ( (as both are in FIRST(F))
 }
+
+FIRST(E') = {
+  epsilon (from rule 4),
+  + (from rule 3)
+}
+
