@@ -29,3 +29,6 @@ FIRST(E') = {
   + (from rule 3)
 }
 
+FIRST(E) = {
+  int, ( (as both are in FIRST(T))
+}
