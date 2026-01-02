@@ -19,3 +19,7 @@ FIRST(T') = {
   epsilon (from rule 7),
   * (from rule 6)
 }
+
+FIRST(T) = {
+  int, ( (as both are in FIRST(F))
+}
