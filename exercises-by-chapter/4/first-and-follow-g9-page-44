@@ -36,3 +36,10 @@ FIRST(E) = {
 FIRST(P) = {
   int, ( (as both are in FIRST(E))
 }
+
+FOLLOW(P) = { $ }
+
+FOLLOW(E) = {
+  ) (from rule  8, following F -> alpha E beta),
+  $ (from rule 1)
+}
