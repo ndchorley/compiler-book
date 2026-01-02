@@ -57,3 +57,9 @@ FOLLOW(T) = {
 FOLLOW(T') = {
   +, ), $ (rule 5. FOLLOW(T) goes in FOLLOW(T'))
 }
+
+FOLLOW(F) = {
+  * (rule 6. FIRST(T') goes in FOLLOW(F)),
+  +, ), $ (rule 6. FIRST(T') contains epsilon, so FOLLOW(T')
+           goes in FOLLOW(F))
+}
