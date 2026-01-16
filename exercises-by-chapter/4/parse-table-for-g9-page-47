@@ -48,3 +48,31 @@ F -> int
 ---------------
 
 => T[F, int] = 9
+
+Now considering epsilon:
+
+FIRST(E') contains epsilon
+
+T[E', )] = 4 and T[E', $] = 4
+
+FIRST(T') contains epsilon
+
+T[T', +] = 7, T[T', )] = 7 and T[T', $] = 7
+
+The complete parse table is:
+
+T[P, (] = 1
+T[P, int] = 1
+T[E, int] = 2
+T[E, (] = 2
+T[T, int] = 5
+T[T, (] = 5
+T[E', +] = 3
+T[E', )] = 4
+T[E', $] = 4
+T[T', *] = 6
+T[T', +] = 7
+T[T', )] = 7
+T[T', $] = 7
+T[F, (] = 8
+T[F, int] = 9
